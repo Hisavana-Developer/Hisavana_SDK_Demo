@@ -1,0 +1,43 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://mvn.shalltry.com/repository/maven-public/" }
+        maven { url "https://mvn.shalltry.com/repository/ad-releases/" }
+        maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.4.2"
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://mvn.shalltry.com/repository/maven-public/" }
+        maven { url "https://mvn.shalltry.com/repository/ad-releases/" }
+        maven { url 'https://jitpack.io' }
+        // ironsource
+        maven {url 'https://android-sdk.is.com/'}
+        maven {url 'https://artifact.bytedance.com/repository/pangle'}
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    compileSdkVersion = 34
+    minSdkVersion = 24
+    targetSdkVersion = 34
+    versionCode = 20250522
+    SDK_version = "3.5.0.2"
+    versionName = "v1.1"
+}
+
