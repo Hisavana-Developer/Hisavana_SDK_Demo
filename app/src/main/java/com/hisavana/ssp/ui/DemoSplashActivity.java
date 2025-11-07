@@ -27,6 +27,7 @@ import com.cloud.sdk.commonutil.control.AdxPreferencesHelper;
 import com.cloud.sdk.commonutil.util.CommonLogUtil;
 import com.hisavana.ssp.R;
 import com.hisavana.ssp.util.DemoConstants;
+import com.transsion.ga.AthenaAnalytics;
 
 import java.lang.ref.WeakReference;
 
@@ -84,6 +85,10 @@ public class DemoSplashActivity extends AppCompatActivity implements PrivacyAgre
             PrivacyAgreementDialog dialog = new PrivacyAgreementDialog(this);
             dialog.show(getSupportFragmentManager(), "privacy");
         }
+
+        CommonLogUtil.Log().i(CommonLogUtil.TAG, "athena setTest");
+        // 请勿动
+        AthenaAnalytics.setTest(true);
     }
 
     // TODO Init AdManger
