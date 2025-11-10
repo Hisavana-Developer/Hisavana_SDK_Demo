@@ -18,7 +18,7 @@
             android:name=".ui.NativeMainActivity"
             android:exported="false" />
         <activity
-            android:name=".rewarded.ADMediationRewardedAdActivity"
+            android:name=".rewarded.ADHisavanaRewardedAdActivity"
             android:exported="false" />
         <activity
             android:name=".ui.DemoMainActivity"

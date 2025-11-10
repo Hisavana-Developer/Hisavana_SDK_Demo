@@ -16,7 +16,7 @@ import androidx.core.app.ActivityCompat;
 
 import com.hisavana.ssp.BuildConfig;
 import com.hisavana.ssp.R;
-import com.hisavana.ssp.rewarded.ADMediationRewardedAdActivity;
+import com.hisavana.ssp.rewarded.ADHisavanaRewardedAdActivity;
 
 /**
  * @author peng.sun
@@ -117,7 +117,7 @@ public class DemoMainActivity extends AppCompatActivity implements View.OnClickL
                 startActivity(new Intent(this, BannerAdActivity.class));
                 break;
             case R.id.media_videoBtn:
-                startActivity(new Intent(this, ADMediationRewardedAdActivity.class));
+                startActivity(new Intent(this, ADHisavanaRewardedAdActivity.class));
                 break;
         }
     }

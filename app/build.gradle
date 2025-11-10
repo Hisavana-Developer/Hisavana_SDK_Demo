@@ -28,6 +28,8 @@ android {
         multiDexEnabled true
 
         buildConfigField "String","sdk_version","\"${rootProject.ext.SDK_version}\""
+        // 请勿动
+        buildConfigField "boolean", "enable", "true"
     }
 
     buildTypes {
@@ -56,8 +58,8 @@ android {
             def releaseType = variant.buildType.name
             def time = new Date().format('yyyyMMdd')
             //lite
-            //outputFileName = "Mediation" + "_V" + defaultConfig.versionName + "_" + time + "_" + releaseType + "_lite" + ".apk"
-            outputFileName = "Mediation" + "_V" + defaultConfig.versionName + "_" + time + "_" + releaseType + ".apk"
+            //outputFileName = "Hisavana" + "_V" + defaultConfig.versionName + "_" + time + "_" + releaseType + "_lite" + ".apk"
+            outputFileName = "Hisavana" + "_V" + defaultConfig.versionName + "_" + time + "_" + releaseType + ".apk"
         }
     }
 

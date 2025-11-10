@@ -21,7 +21,7 @@ import java.lang.ref.WeakReference;
 /**
  * 聚合 激励视频
  */
-public class ADMediationRewardedAdActivity extends BaseActivity {
+public class ADHisavanaRewardedAdActivity extends BaseActivity {
 
     /**
      * 记载激励广告的
@@ -119,9 +119,9 @@ public class ADMediationRewardedAdActivity extends BaseActivity {
      */
     private static class TAdListener extends AdListener {
 
-        WeakReference<ADMediationRewardedAdActivity> weakReference;
+        WeakReference<ADHisavanaRewardedAdActivity> weakReference;
 
-        TAdListener(ADMediationRewardedAdActivity activity) {
+        TAdListener(ADHisavanaRewardedAdActivity activity) {
             this.weakReference = new WeakReference<>(activity);
         }
 
@@ -132,7 +132,7 @@ public class ADMediationRewardedAdActivity extends BaseActivity {
                 return;
             }
             weakReference.get().showAdStatus("get ad success ");
-            CommonLogUtil.Log().i(DemoConstants.VIDEO_TAG, "ADMediationVideoActivity --> onAdLoaded");
+            CommonLogUtil.Log().i(DemoConstants.VIDEO_TAG, "ADHisavanaVideoActivity --> onAdLoaded");
         }
 
         // 异常回调（适用的广告位：所有广告位）
@@ -144,7 +144,7 @@ public class ADMediationRewardedAdActivity extends BaseActivity {
             weakReference.get().loading = false;
             weakReference.get().load.setTextColor(Color.BLACK);
             weakReference.get().showAdStatus("广告加载失败 失败的原因：" + errorCode.getErrorMessage() + "，errorcode：" + errorCode.getErrorCode());
-            CommonLogUtil.Log().d(DemoConstants.VIDEO_TAG, "ADMediationVideoActivity --> onError");
+            CommonLogUtil.Log().d(DemoConstants.VIDEO_TAG, "ADHisavanaVideoActivity --> onError");
         }
 
         // 展示回调（适用的广告位：Splash、Interstitial、Banner、Reward）
@@ -154,7 +154,7 @@ public class ADMediationRewardedAdActivity extends BaseActivity {
                 return;
             }
             weakReference.get().showAdStatus("广告展示");
-            CommonLogUtil.Log().i(DemoConstants.VIDEO_TAG, "ADMediationVideoActivity --> onAdShow");
+            CommonLogUtil.Log().i(DemoConstants.VIDEO_TAG, "ADHisavanaVideoActivity --> onAdShow");
         }
 
         // 点击回调（适用的广告位：Splash、Interstitial、Banner、Reward）
@@ -163,7 +163,7 @@ public class ADMediationRewardedAdActivity extends BaseActivity {
             if (weakReference.get() == null) {
                 return;
             }
-            CommonLogUtil.Log().i(DemoConstants.VIDEO_TAG, "ADMediationVideoActivity --> onClicked");
+            CommonLogUtil.Log().i(DemoConstants.VIDEO_TAG, "ADHisavanaVideoActivity --> onClicked");
             weakReference.get().showAdStatus("点击了广告");
         }
 
@@ -173,7 +173,7 @@ public class ADMediationRewardedAdActivity extends BaseActivity {
             if (weakReference.get() == null) {
                 return;
             }
-            CommonLogUtil.Log().i(DemoConstants.VIDEO_TAG, "ADMediationVideoActivity --> onTimeOut");
+            CommonLogUtil.Log().i(DemoConstants.VIDEO_TAG, "ADHisavanaVideoActivity --> onTimeOut");
             weakReference.get().showAdStatus("广告超时");
         }
 
@@ -183,7 +183,7 @@ public class ADMediationRewardedAdActivity extends BaseActivity {
             if (weakReference.get() == null) {
                 return;
             }
-            CommonLogUtil.Log().i(DemoConstants.VIDEO_TAG, "ADMediationVideoActivity --> onAdClosed");
+            CommonLogUtil.Log().i(DemoConstants.VIDEO_TAG, "ADHisavanaVideoActivity --> onAdClosed");
             weakReference.get().showAdStatus("广告关闭");
         }
 
@@ -194,7 +194,7 @@ public class ADMediationRewardedAdActivity extends BaseActivity {
                 return;
             }
             weakReference.get().showAdStatus("获取激励奖励");
-            CommonLogUtil.Log().i(DemoConstants.VIDEO_TAG, "ADMediationVideoActivity --> 获取激励奖励");
+            CommonLogUtil.Log().i(DemoConstants.VIDEO_TAG, "ADHisavanaVideoActivity --> 获取激励奖励");
         }
     }
 }
