@@ -22,9 +22,9 @@ import com.cloud.hisavana.sdk.api.config.AdManager;
 import com.cloud.hisavana.sdk.api.listener.AdListener;
 import com.cloud.hisavana.sdk.api.listener.OnSkipListener;
 import com.cloud.hisavana.sdk.common.constant.TaErrorCode;
-import com.cloud.hisavana.sdk.config.AdxServerConfig;
 import com.cloud.sdk.commonutil.control.AdxPreferencesHelper;
 import com.cloud.sdk.commonutil.util.CommonLogUtil;
+import com.hisavana.ssp.BuildConfig;
 import com.hisavana.ssp.R;
 import com.hisavana.ssp.util.DemoConstants;
 import com.transsion.ga.AthenaAnalytics;
@@ -86,9 +86,9 @@ public class DemoSplashActivity extends AppCompatActivity implements PrivacyAgre
             dialog.show(getSupportFragmentManager(), "privacy");
         }
 
-        CommonLogUtil.Log().i(CommonLogUtil.TAG, "athena setTest");
+        CommonLogUtil.Log().i(CommonLogUtil.TAG, "athena setTest = " + BuildConfig.enable);
         // 请勿动
-        AthenaAnalytics.setTest(true);
+        AthenaAnalytics.setTest(BuildConfig.enable);
     }
 
     // TODO Init AdManger
